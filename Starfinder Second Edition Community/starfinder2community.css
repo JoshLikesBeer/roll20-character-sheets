@@ -1,3 +1,7 @@
+:root {
+  --dark-secondarytext: #d6d6d6;
+}
+
 /**********************************************************************************************************/
 /***************************      MARK: - GLOBAL SETTINGS                      ***************************/
 /********************************************************************************************************/
@@ -59,7 +63,7 @@ fieldset {
   background: transparent; }
 
 h1 {
-  background-color: #002766;
+  background-color: #000066;
   color: white;
   font-family: initial;
   font-size: 1.5em;
@@ -93,7 +97,7 @@ select {
 input[type="text"]:focus,
 input[type="number"]:focus,
 textarea:focus {
-  outline-color: #002766; }
+  outline-color: #000066; }
 
 input[type="text"]:-webkit-input-placeholder,
 input[type="text"]:-moz-placeholder,
@@ -106,7 +110,7 @@ input[type="text"]:placeholder-shown,
 input[type="number"]:placeholder-shown,
 textarea:placeholder-shown {
   background-color: #fdf6ed;
-  border: 0.2em solid #3e9798;
+  border: 0.2em solid #016073;
   text-transform: capitalize; }
 
 input[type="number"] {
@@ -160,7 +164,7 @@ textarea {
   border: 0.2em solid #40105b;
   /** REMOVE LATER */
   background-color: #afbdc4;
-  background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Pathfinder%20Second%20Edition%20by%20Roll20/images/background.png);
+  background-image: url(https://github.com/JoshLikesBeer/roll20-character-sheets/blob/master/Starfinder%20Second%20Edition%20Community/images/background2.png?raw=true);
   background-size: cover;
   background-position: center; }
 
@@ -230,7 +234,7 @@ button.sheet-settings-button {
   border: 1.5px solid #def;
   border-radius: 50%;
   color: #cdf;
-  background: #002766;
+  background: #000066;
   opacity: 0;
   font-size: 7pt;
   line-height: 1em;
@@ -261,6 +265,7 @@ input[name="attr_toggles"][value*="acrobatics"] ~ div.sheet-character div.sheet-
 input[name="attr_toggles"][value*="arcana"] ~ div.sheet-character div.sheet-skills button.sheet-settings-button[name*="arcana"],
 input[name="attr_toggles"][value*="athletics"] ~ div.sheet-character div.sheet-skills button.sheet-settings-button[name*="athletics"],
 input[name="attr_toggles"][value*="crafting"] ~ div.sheet-character div.sheet-skills button.sheet-settings-button[name*="crafting"],
+input[name="attr_toggles"][value*="computers"]~div.sheet-character div.sheet-skills button.sheet-settings-button[name*="computers"],
 input[name="attr_toggles"][value*="deception"] ~ div.sheet-character div.sheet-skills button.sheet-settings-button[name*="deception"],
 input[name="attr_toggles"][value*="diplomacy"] ~ div.sheet-character div.sheet-skills button.sheet-settings-button[name*="diplomacy"],
 input[name="attr_toggles"][value*="intimidation"] ~ div.sheet-character div.sheet-skills button.sheet-settings-button[name*="intimidation"],
@@ -268,6 +273,7 @@ input[name="attr_toggles"][value*="medicine"] ~ div.sheet-character div.sheet-sk
 input[name="attr_toggles"][value*="nature"] ~ div.sheet-character div.sheet-skills button.sheet-settings-button[name*="nature"],
 input[name="attr_toggles"][value*="occultism"] ~ div.sheet-character div.sheet-skills button.sheet-settings-button[name*="occultism"],
 input[name="attr_toggles"][value*="performance"] ~ div.sheet-character div.sheet-skills button.sheet-settings-button[name*="performance"],
+input[name="attr_toggles"][value*="piloting"]~div.sheet-character div.sheet-skills button.sheet-settings-button[name*="piloting"],
 input[name="attr_toggles"][value*="religion"] ~ div.sheet-character div.sheet-skills button.sheet-settings-button[name*="religion"],
 input[name="attr_toggles"][value*="society"] ~ div.sheet-character div.sheet-skills button.sheet-settings-button[name*="society"],
 input[name="attr_toggles"][value*="stealth"] ~ div.sheet-character div.sheet-skills button.sheet-settings-button[name*="stealth"],
@@ -291,7 +297,7 @@ input[name="attr_toggles"][value*=innate] ~ div.sheet-spells div.sheet-column di
 /* HIDE PC SECTIONS NOT NEEDED ON NPC PAGE
 	----------------------------- */
 div.sheet-background-color {
-  background-color: #3e9798;
+  background-color: #016073;
   color: white; }
 
 div.sheet-ability-select label {
@@ -564,13 +570,13 @@ div.sheet-column h1[data-i18n="character_sheet"] {
   width: 100%; }
 
 div.sheet-column h2[data-i18n="proficiency"] {
-  color: #002766;
+  color: #000066;
   line-height: inherit;
   text-decoration: underline; }
 
 div.sheet-column div.sheet-character-prof,
 div.sheet-column div.sheet-character-action {
-  color: #002766;
+  color: #000066;
   font-size: 0.9em;
   font-family: "Arial Narrow", sans-serif !important;
   text-transform: capitalize; }
@@ -607,7 +613,7 @@ div.sheet-character-info {
     display: flex;
     padding: 0; }
     div.sheet-character-info > label > span {
-      background: #002766;
+      background: #000066;
       box-sizing: border-box;
       color: white;
       flex: 0 0 auto;
@@ -652,7 +658,7 @@ div.sheet-pfrow {
   width: 100%; }
 
 div.sheet-column label[data-i18n-title="level"] > span {
-  background-color: #002766;
+  background-color: #000066;
   display: inline-block;
   height: 2em;
   padding: 0.5em;
@@ -660,7 +666,7 @@ div.sheet-column label[data-i18n-title="level"] > span {
   width: 100%; }
 
 div.sheet-column label[data-i18n-title="hero_points"] > span {
-  color: #002766;
+  color: #000066;
   font-size: 0.8em; }
 
 div.sheet-column input[name="attr_level"],
@@ -992,7 +998,7 @@ div.sheet-repeating-grid {
     font-size: 11pt;
     text-align: left;
     text-transform: unset;
-    background-color: #002766; }
+    background-color: #000066; }
     div.sheet-repeating-grid button[type="roll"]:hover {
       background: #0044b3; }
   div.sheet-repeating-grid input {
@@ -1119,7 +1125,7 @@ div.sheet-strikes button[type="roll"] {
     font-size: 1.2em;
     margin-top: 5px; }
   div.sheet-strikes button[type="roll"]:not(:first-of-type) {
-    background-color: #002766;
+    background-color: #000066;
     font-weight: normal; }
     div.sheet-strikes button[type="roll"]:not(:first-of-type):hover {
       background: #0044b3; }
@@ -1521,7 +1527,7 @@ div.sheet-inv-display-grid {
   grid-template-columns: 4fr 1.5fr 0.5fr 1fr 0.5fr;
   padding: 0.25em 0em; }
   div.sheet-inv-display-grid:first-child {
-    background: #002766;
+    background: #000066;
     color: white;
     padding: 0.5em;
     font-size: 7pt;
@@ -1716,7 +1722,7 @@ div.sheet-spells h1.sheet-label + span.sheet-sort {
     bottom: 0.8em;
     right: 1em;
     margin: 0;
-    background-color: #002766;
+    background-color: #000066;
     border: solid 1px white;
     color: white;
     text-transform: capitalize; }
@@ -1820,7 +1826,7 @@ div.sheet-spells div.sheet-spell-panel-row > div.sheet-settings {
   div.sheet-spells div.sheet-spell-panel-row > div.sheet-settings span.sheet-bordertop {
     display: flex;
     flex-direction: column;
-    border-top: 3px solid #3e9798;
+    border-top: 3px solid #016073;
     grid-column: 1 / -1;
     padding-top: 3px;
     color: white;
@@ -1940,7 +1946,7 @@ span.sheet-collapse {
 /* Adjusts looks on a section relying on .sheet.settings for expand/collapse */
 div.sheet-details div.sheet-notes div.sheet-settings {
   border-left: none;
-  background-color: #3e9798; }
+  background-color: #016073; }
 
 div.sheet-settings::before {
   display: block;
@@ -1971,7 +1977,7 @@ input[name="attr_toggles"][value*="details"] ~ div.sheet-details {
   height: auto;
   display: block; }
 
-input.sheet-toggles[value*="collapse"] ~ div.sheet-display span.sheet-collapse, input.sheet-toggles[value*="collapse"] ~ div.sheet-repeating-grid span.sheet-collapse, input.sheet-toggles[value*="collapse"] ~ div.sheet-repeating-grid-display span.sheet-collapse, input.sheet-toggles[value*="collapse"] ~ div.sheet-repeating-spell-display span.sheet-collapse, input.sheet-toggles[value*="collapse"] ~ div.sheet-inv-display-grid span.sheet-collapse, input[name="attr_toggles"][value*="charisma"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-charisma-settings, input[name="attr_toggles"][value*="constitution"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-constitution-settings, input[name="attr_toggles"][value*="dexterity"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-dexterity-settings, input[name="attr_toggles"][value*="intelligence"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-intelligence-settings, input[name="attr_toggles"][value*="strength"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-strength-settings, input[name="attr_toggles"][value*="wisdom"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-wisdom-settings, input[name="attr_toggles"][value*="acrobatics"] ~ div.sheet-character div.sheet-skills div.sheet-acrobatics-settings, input[name="attr_toggles"][value*="arcana"] ~ div.sheet-character div.sheet-skills div.sheet-arcana-settings, input[name="attr_toggles"][value*="athletics"] ~ div.sheet-character div.sheet-skills div.sheet-athletics-settings, input[name="attr_toggles"][value*="crafting"] ~ div.sheet-character div.sheet-skills div.sheet-crafting-settings, input[name="attr_toggles"][value*="deception"] ~ div.sheet-character div.sheet-skills div.sheet-deception-settings, input[name="attr_toggles"][value*="diplomacy"] ~ div.sheet-character div.sheet-skills div.sheet-diplomacy-settings, input[name="attr_toggles"][value*="intimidation"] ~ div.sheet-character div.sheet-skills div.sheet-intimidation-settings, input[name="attr_toggles"][value*="medicine"] ~ div.sheet-character div.sheet-skills div.sheet-medicine-settings, input[name="attr_toggles"][value*="nature"] ~ div.sheet-character div.sheet-skills div.sheet-nature-settings, input[name="attr_toggles"][value*="occultism"] ~ div.sheet-character div.sheet-skills div.sheet-occultism-settings, input[name="attr_toggles"][value*="performance"] ~ div.sheet-character div.sheet-skills div.sheet-performance-settings, input[name="attr_toggles"][value*="religion"] ~ div.sheet-character div.sheet-skills div.sheet-religion-settings, input[name="attr_toggles"][value*="society"] ~ div.sheet-character div.sheet-skills div.sheet-society-settings, input[name="attr_toggles"][value*="stealth"] ~ div.sheet-character div.sheet-skills div.sheet-stealth-settings, input[name="attr_toggles"][value*="survival"] ~ div.sheet-character div.sheet-skills div.sheet-survival-settings, input[name="attr_toggles"][value*="thievery"] ~ div.sheet-character div.sheet-skills div.sheet-thievery-settings,
+input.sheet-toggles[value*="collapse"] ~ div.sheet-display span.sheet-collapse, input.sheet-toggles[value*="collapse"] ~ div.sheet-repeating-grid span.sheet-collapse, input.sheet-toggles[value*="collapse"] ~ div.sheet-repeating-grid-display span.sheet-collapse, input.sheet-toggles[value*="collapse"] ~ div.sheet-repeating-spell-display span.sheet-collapse, input.sheet-toggles[value*="collapse"] ~ div.sheet-inv-display-grid span.sheet-collapse, input[name="attr_toggles"][value*="charisma"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-charisma-settings, input[name="attr_toggles"][value*="constitution"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-constitution-settings, input[name="attr_toggles"][value*="dexterity"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-dexterity-settings, input[name="attr_toggles"][value*="intelligence"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-intelligence-settings, input[name="attr_toggles"][value*="strength"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-strength-settings, input[name="attr_toggles"][value*="wisdom"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-wisdom-settings, input[name="attr_toggles"][value*="acrobatics"] ~ div.sheet-character div.sheet-skills div.sheet-acrobatics-settings, input[name="attr_toggles"][value*="arcana"] ~ div.sheet-character div.sheet-skills div.sheet-arcana-settings, input[name="attr_toggles"][value*="athletics"] ~ div.sheet-character div.sheet-skills div.sheet-athletics-settings, input[name="attr_toggles"][value*="crafting"] ~ div.sheet-character div.sheet-skills div.sheet-crafting-settings, input[name="attr_toggles"][value*="computers"] ~ div.sheet-character div.sheet-skills div.sheet-computers-settings, input[name="attr_toggles"][value*="deception"] ~ div.sheet-character div.sheet-skills div.sheet-deception-settings, input[name="attr_toggles"][value*="diplomacy"] ~ div.sheet-character div.sheet-skills div.sheet-diplomacy-settings, input[name="attr_toggles"][value*="intimidation"] ~ div.sheet-character div.sheet-skills div.sheet-intimidation-settings, input[name="attr_toggles"][value*="medicine"] ~ div.sheet-character div.sheet-skills div.sheet-medicine-settings, input[name="attr_toggles"][value*="nature"] ~ div.sheet-character div.sheet-skills div.sheet-nature-settings, input[name="attr_toggles"][value*="occultism"] ~ div.sheet-character div.sheet-skills div.sheet-occultism-settings, input[name="attr_toggles"][value*="performance"] ~ div.sheet-character div.sheet-skills div.sheet-performance-settings, input[name="attr_toggles"][value*="piloting"] ~ div.sheet-character div.sheet-skills div.sheet-piloting-settings, input[name="attr_toggles"][value*="religion"] ~ div.sheet-character div.sheet-skills div.sheet-religion-settings, input[name="attr_toggles"][value*="society"] ~ div.sheet-character div.sheet-skills div.sheet-society-settings, input[name="attr_toggles"][value*="stealth"] ~ div.sheet-character div.sheet-skills div.sheet-stealth-settings, input[name="attr_toggles"][value*="survival"] ~ div.sheet-character div.sheet-skills div.sheet-survival-settings, input[name="attr_toggles"][value*="thievery"] ~ div.sheet-character div.sheet-skills div.sheet-thievery-settings,
 input[name="attr_toggles"][value*="class_dc"] ~ div.sheet-character div.sheet-classdc div.sheet-settings,
 input[name="attr_toggles"][value*="shield"] ~ div.sheet-character div.sheet-armorclass div.sheet-shield-grid div.sheet-settings,
 input[name="attr_toggles"][value*="armor_class"] ~ div.sheet-character div.sheet-armorclass div.sheet-armorclass-main div.sheet-settings,
@@ -1984,7 +1990,7 @@ input[name="attr_toggles"][value*="settings"] ~ div.sheet-settings,
 input[name="attr_toggles"][value*="saving_throws"] ~ div.sheet-character div.sheet-savingthrows div.sheet-settings {
   height: auto; }
 
-input[name="attr_toggles"][value*="charisma"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-charisma-settings, input[name="attr_toggles"][value*="constitution"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-constitution-settings, input[name="attr_toggles"][value*="dexterity"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-dexterity-settings, input[name="attr_toggles"][value*="intelligence"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-intelligence-settings, input[name="attr_toggles"][value*="strength"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-strength-settings, input[name="attr_toggles"][value*="wisdom"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-wisdom-settings, input[name="attr_toggles"][value*="acrobatics"] ~ div.sheet-character div.sheet-skills div.sheet-acrobatics-settings, input[name="attr_toggles"][value*="arcana"] ~ div.sheet-character div.sheet-skills div.sheet-arcana-settings, input[name="attr_toggles"][value*="athletics"] ~ div.sheet-character div.sheet-skills div.sheet-athletics-settings, input[name="attr_toggles"][value*="crafting"] ~ div.sheet-character div.sheet-skills div.sheet-crafting-settings, input[name="attr_toggles"][value*="deception"] ~ div.sheet-character div.sheet-skills div.sheet-deception-settings, input[name="attr_toggles"][value*="diplomacy"] ~ div.sheet-character div.sheet-skills div.sheet-diplomacy-settings, input[name="attr_toggles"][value*="intimidation"] ~ div.sheet-character div.sheet-skills div.sheet-intimidation-settings, input[name="attr_toggles"][value*="medicine"] ~ div.sheet-character div.sheet-skills div.sheet-medicine-settings, input[name="attr_toggles"][value*="nature"] ~ div.sheet-character div.sheet-skills div.sheet-nature-settings, input[name="attr_toggles"][value*="occultism"] ~ div.sheet-character div.sheet-skills div.sheet-occultism-settings, input[name="attr_toggles"][value*="performance"] ~ div.sheet-character div.sheet-skills div.sheet-performance-settings, input[name="attr_toggles"][value*="religion"] ~ div.sheet-character div.sheet-skills div.sheet-religion-settings, input[name="attr_toggles"][value*="society"] ~ div.sheet-character div.sheet-skills div.sheet-society-settings, input[name="attr_toggles"][value*="stealth"] ~ div.sheet-character div.sheet-skills div.sheet-stealth-settings, input[name="attr_toggles"][value*="survival"] ~ div.sheet-character div.sheet-skills div.sheet-survival-settings, input[name="attr_toggles"][value*="thievery"] ~ div.sheet-character div.sheet-skills div.sheet-thievery-settings,
+input[name="attr_toggles"][value*="charisma"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-charisma-settings, input[name="attr_toggles"][value*="constitution"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-constitution-settings, input[name="attr_toggles"][value*="dexterity"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-dexterity-settings, input[name="attr_toggles"][value*="intelligence"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-intelligence-settings, input[name="attr_toggles"][value*="strength"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-strength-settings, input[name="attr_toggles"][value*="wisdom"] ~ div.sheet-character div.sheet-column div.sheet-ability-scores div.sheet-wisdom-settings, input[name="attr_toggles"][value*="acrobatics"] ~ div.sheet-character div.sheet-skills div.sheet-acrobatics-settings, input[name="attr_toggles"][value*="arcana"] ~ div.sheet-character div.sheet-skills div.sheet-arcana-settings, input[name="attr_toggles"][value*="athletics"] ~ div.sheet-character div.sheet-skills div.sheet-athletics-settings, input[name="attr_toggles"][value*="crafting"] ~ div.sheet-character div.sheet-skills div.sheet-crafting-settings, input[name="attr_toggles"][value*="computers"] ~ div.sheet-character div.sheet-skills div.sheet-computers-settings, input[name="attr_toggles"][value*="deception"] ~ div.sheet-character div.sheet-skills div.sheet-deception-settings, input[name="attr_toggles"][value*="diplomacy"] ~ div.sheet-character div.sheet-skills div.sheet-diplomacy-settings, input[name="attr_toggles"][value*="intimidation"] ~ div.sheet-character div.sheet-skills div.sheet-intimidation-settings, input[name="attr_toggles"][value*="medicine"] ~ div.sheet-character div.sheet-skills div.sheet-medicine-settings, input[name="attr_toggles"][value*="nature"] ~ div.sheet-character div.sheet-skills div.sheet-nature-settings, input[name="attr_toggles"][value*="occultism"] ~ div.sheet-character div.sheet-skills div.sheet-occultism-settings, input[name="attr_toggles"][value*="performance"] ~ div.sheet-character div.sheet-skills div.sheet-performance-settings, input[name="attr_toggles"][value*="piloting"] ~ div.sheet-character div.sheet-skills div.sheet-piloting-settings, input[name="attr_toggles"][value*="religion"] ~ div.sheet-character div.sheet-skills div.sheet-religion-settings, input[name="attr_toggles"][value*="society"] ~ div.sheet-character div.sheet-skills div.sheet-society-settings, input[name="attr_toggles"][value*="stealth"] ~ div.sheet-character div.sheet-skills div.sheet-stealth-settings, input[name="attr_toggles"][value*="survival"] ~ div.sheet-character div.sheet-skills div.sheet-survival-settings, input[name="attr_toggles"][value*="thievery"] ~ div.sheet-character div.sheet-skills div.sheet-thievery-settings,
 div.sheet-repeating input.sheet-toggles[value*="settings"] ~ div.sheet-settings,
 input[name="attr_toggles"][value*="perception"] ~ div.sheet-character div.sheet-column div.sheet-perception > div.sheet-settings,
 input.sheet-toggles[value*="settings"] ~ div.sheet-settings,
@@ -2160,11 +2166,11 @@ div.sheet-footer {
     font-size: 1.2em;
     letter-spacing: 0.05em; }
   .sheet-rolltemplate-rolls .sheet-template-body {
-    border: 1px solid #3e9798;
+    border: 1px solid #01404d;
     text-align: center;
-    background-color: #3e9798; }
+    background-color: #01404d; }
   .sheet-rolltemplate-rolls .sheet-template-header {
-    background-color: #002766;
+    background-color: #000066;
     color: white;
     font-size: 1.35em;
     font-variant: small-caps;
@@ -2179,13 +2185,13 @@ div.sheet-footer {
     font-weight: normal;
     letter-spacing: 0.05em; }
   .sheet-rolltemplate-rolls .sheet-template-row {
-    background-color: #3e9798;
+    background-color: #01404d;
     color: #fdf6ec;
     margin: 0;
     padding: 0.1em 0.05em 0.3em 0.05em;
     /* Use this to alternate the background colors for each row */ }
     .sheet-rolltemplate-rolls .sheet-template-row:nth-child(2n+0) {
-      background-color: #81bbe6;
+      background-color: #e0cfe6;
       color: #40105b; }
   .sheet-rolltemplate-rolls .sheet-template-roll-name {
     text-transform: uppercase; }
@@ -2203,6 +2209,7 @@ div.sheet-footer {
     color: #40105b; }
   .sheet-rolltemplate-rolls span.sheet-template-roll-name.sheet-attack::before {
     content: "⚔";
+    color: white;
     /* \2694 */
     font-size: 1.5em; }
   .sheet-rolltemplate-rolls span.sheet-template-roll-name.sheet-damage::before,
@@ -2212,10 +2219,10 @@ div.sheet-footer {
     font-size: 1.4em; }
   .sheet-rolltemplate-rolls span.sheet-template-roll-name.sheet-critical-damage::before,
   .sheet-rolltemplate-rolls .sheet-success {
-    color: green; }
+    color: #aaff00; }
   .sheet-rolltemplate-rolls .sheet-desc,
   .sheet-rolltemplate-rolls .sheet-notes {
-    border-top: 1px solid #3e9798;
+    border-top: 1px solid #01404d;
     background: #fdf6ec;
     color: #40105b;
     text-align: left;
@@ -2232,8 +2239,8 @@ div.sheet-footer {
     border: none;
     color: #40105b;
     display: inline-block;
-    font-size: 1.7em;
-    padding: 5px;
+    font-size: 1.3em;
+    padding: 2px;
     letter-spacing: 0.1em;
     text-shadow: 1px 1px 0 #fdf6ec, -1px -1px 0 #fdf6ec, 1px -1px 0 #fdf6ec, -1px 1px 0 #fdf6ec, 1px 1px 0 #fdf6ec; }
   .sheet-rolltemplate-rolls .inlinerollresult.fullfail,
@@ -2497,7 +2504,7 @@ div.sheet-npc-skills {
   div.sheet-npc-skills div.repcontainer {
     display: inline; }
   div.sheet-npc-skills > h2 {
-    color: #002766;
+    color: #000066;
     display: block;
     font-family: serif;
     font-size: 16pt;
@@ -2558,7 +2565,7 @@ div.sheet-npc input {
   /* HIDE HEADERS WITHOUT INFORMATION */ }
   div.sheet-npc input[type="text"], div.sheet-npc input[type="number"] {
     background: white;
-    border: 1px solid #002766;
+    border: 1px solid #000066;
     height: 1.5em;
     padding: 3px;
     font-size: 0.9em;
@@ -2581,7 +2588,7 @@ div.sheet-npc input {
     display: none; }
 
 div.sheet-npc label {
-  color: #002766;
+  color: #000066;
   width: initial;
   text-transform: capitalize; }
 

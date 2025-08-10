@@ -13,7 +13,7 @@
     <input class="toggles" name="attr_toggles" type="hidden" value="color:default,innate,focus,cantrips,normalspells,"/><div class="pc-info">
     <!-- Starfinder Character Sheet -->
     <div class="column">
-        <img alt="Starfinder logo" src="https://s3.amazonaws.com/files.d20.io/images/81978424/gPz-jgjL0kKUDQEXUWvgmQ/med.png?1558470838" />
+        <img alt="Starfinder logo" src="https://github.com/JoshLikesBeer/roll20-character-sheets/blob/master/Starfinder%20Second%20Edition%20Community/images/Logo-Starfinder2e-512x117.png?raw=true" />
         <h1 data-i18n="character_sheet">character sheet</h1>
         <div class="character-prof">
             <h2 data-i18n="proficiency">proficiency</h2>
@@ -724,7 +724,7 @@
                     <div class="npc-repeating-item">
                         <div>
                             <button class="npc-roll" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{item}}} {{desc=@{description}}}">
-                                <span class="npc-row-title" name="attr_worn_item"></span>
+                                <span class="npc-row-title" name="attr_name"></span>
                             </button>
                             <span name="attr_description"></span>
                         </div>
@@ -923,7 +923,7 @@
                     <div class="npc-repeating-item">
                         <div>
                             <button name="roll_ATTACK-DAMAGE-NPC" class="npc-roll" title="npc melee weapon name display & attack and damage roll" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{melee_strike}}} {{notes_show=@{roll_show_notes}}} {{notes=@{weapon_notes}}} @{weapon_roll_npc} @{damage_roll_npc} @{roll_critical_damage_npc} @{damage_additional_roll_npc}">
-                                <span name="attr_weapon"></span>
+                                <span name="attr_name"></span>
                             </button>
                             <button name="roll_ATTACK-NPC" class="npc-roll" title="npc melee weapon attack display & attack only roll" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{melee_strike}}} {{notes_show=@{roll_show_notes}}} {{notes=@{weapon_notes}}} @{weapon_roll_npc}">
                                 <span name="attr_weapon_strike"></span>
@@ -993,7 +993,7 @@
                     <div class="npc-repeating-item">
                         <div>
                             <button class="npc-roll" name="roll_ATTACK-DAMAGE-NPC" title="npc range weapon name display & attack and damage roll" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{ranged_strike}}} {{notes_show=@{roll_show_notes}}} {{notes=@{weapon_notes}}} {{info01_name=^{range}}} {{info01=@{weapon_range}}} @{weapon_roll_npc} @{damage_roll_npc} @{roll_critical_damage_npc} @{damage_additional_roll_npc}">
-                                <span name="attr_weapon"></span>
+                                <span name="attr_name"></span>
                             </button>
                             <button class="npc-roll" name="roll_ATTACK-NPC" title="npc range weapon attack display & attack only roll" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{ranged_strike}}} {{notes_show=@{roll_show_notes}}} {{notes=@{weapon_notes}}} {{info01_name=^{range}}} {{info01=@{weapon_range}}} @{weapon_roll_npc}">
                                 <span name="attr_weapon_strike"></span>
@@ -1451,7 +1451,7 @@
             </button>
             <span class='sublabel darkred' data-i18n='weapon'>weapon</span>
             <button class='display-weapon' data-i18n-title='weapon_name_display_attack_and_damage_roll' name='roll_ATTACK-DAMAGE' title='weapon name display & attack and damage roll' type='roll'  value='@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{melee_strike}}} {{notes_show=@{roll_show_notes}}} {{notes=@{weapon_notes}}} @{weapon_roll} @{damage_roll} @{roll_critical_damage} @{damage_additional_roll}'>
-                <span name='attr_weapon'></span>
+                <span name='attr_name'></span>
             </button>
             <button data-i18n-title='show_or_hide_weapon_notes' name='act_collapse' title='show or hide weapon notes' type='action'>
                 4
@@ -1612,7 +1612,7 @@
             </button>
             <span class='sublabel darkred' data-i18n='weapon'>weapon</span>
             <button data-i18n-title='weapon_name_display_attack_and_damage_roll' class='display-weapon' name='roll_ATTACK-DAMAGE' type='roll' title='weapon name display & attack and damage roll' value='@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{ranged_strike}}} {{notes_show=@{roll_show_notes}}} {{info01_name=^{range}}} {{info01=@{weapon_range}}} {{notes=@{weapon_notes}}} @{weapon_roll} @{damage_roll} @{roll_critical_damage} @{damage_additional_roll}'>
-                <span name='attr_weapon'></span>
+                <span name='attr_name'></span>
             </button>
             <button data-i18n-title='show_or_hide_weapon_notes' name='act_collapse' title='show or hide weapon notes' type='action'>
                 4
@@ -3070,8 +3070,8 @@
                 <button class='pictos settings-button' data-i18n-title='resistances_and_immunities_settings' name='act_settings' title='resistances and immunities settings' type='action'>
                     y
                 </button>
-                <button name='roll_RESIST' type='roll' value='@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{resistances_and_immunities}}} {{subheader=^{resistances_and_immunities}}} {{notes_show=[[1]]}} {{notes=@{resistances_and_immunities_notes}}}'>
-                    <span class='repeating-title' name='attr_resistances_and_immunities'></span>
+                <button name='roll_RESIST' type='roll' value='@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{resistances_and_immunities}}} {{notes_show=[[1]]}} {{notes=@{resistances_and_immunities_notes}}}'>
+                    <span class='repeating-title' name='attr_name'></span>
                 </button>
                 <button name='act_collapse' data-i18n-title='show_or_hide_resistance_notes' title='show or hide resistance notes' type='action'>
                     4
@@ -3081,7 +3081,7 @@
             <div class='settings repeating-grid'>
                 <label data-i18n-title='resistances_and_immunities_name' title='resistances and immunities name'>
                     <span data-i18n='name'>name</span>
-                    <input data-i18n-placeholder='resistances_and_immunities' name='attr_resistances_and_immunities' placeholder='resistances or immunities' title='@{resistances_and_immunities}' type='text' value='' />
+                    <input data-i18n-placeholder='resistances_and_immunities' name='attr_name' placeholder='resistances or immunities' title='@{name}' type='text' value='' />
                 </label>
                 <label data-i18n-title='resistances_and_immunities_notes' title='resistances and immunities notes'>
                     <span data-i18n='notes'>notes</span>
@@ -3098,8 +3098,8 @@
                 <button class='pictos settings-button' data-i18n-title='condition_settings' name='act_settings' title='condition settings' type='action'>
                     y
                 </button>
-                <button name='roll_CONDITION' type='roll' value='@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{condition}}} {{subheader=^{conditions}}} {{notes_show=[[1]]}} {{notes=@{condition_notes}}}'>
-                    <span class='repeating-title' name='attr_condition'></span>
+                <button name='roll_CONDITION' type='roll' value='@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{conditions}}} {{notes_show=[[1]]}} {{notes=@{condition_notes}}}'>
+                    <span class='repeating-title' name='attr_name'></span>
                 </button>
                 <button name='act_collapse' data-i18n-title='show_or_hide_condition_notes' title='show or hide condition notes' type='action'>
                     4
@@ -3109,7 +3109,7 @@
             <div class='settings repeating-grid'>
                 <label data-i18n-title='condition_name' title='condition name'>
                     <span data-i18n='name'>name</span>
-                    <input data-i18n-placeholder='condition' name='attr_condition' placeholder='condition' title='@{condition}' type='text' value='' />
+                    <input data-i18n-placeholder='condition' name='attr_name' placeholder='condition' title='@{name}' type='text' value='' />
                 </label>
                 <label data-i18n-title='conditions_notes' title='conditions notes'>
                     <span data-i18n='notes'>notes</span>
@@ -3228,7 +3228,7 @@
                     y
                 </button>
                 <button type='roll' value='@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{sense}}} {{notes_show=[[1]]}} {{notes=@{sense_notes}}}'>
-                    <span class='repeating-title' name='attr_sense'></span>
+                    <span class='repeating-title' name='attr_name'></span>
                 </button>
                 <button name='act_collapse' data-i18n-title='show_or_hide_sense_notes' title='show or hide sense notes' type='action'>
                     4
@@ -3302,7 +3302,7 @@
                     y
                 </button>
                 <button type='roll' value='@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{language}}} {{notes_show=[[1]]}} {{notes=@{language_notes}}}'>
-                    <span class='sheet-repeating-title' name='attr_language'></span>
+                    <span class='sheet-repeating-title' name='attr_name'></span>
                 </button>
                 <button data-i18n-title='show_or_hide_language_notes' name='act_collapse' title='show or hide language notes' type='action'>
                     4
@@ -3420,7 +3420,7 @@
                     <button class="pictos settings-button" data-i18n-title="feat_ancestry_settings"  name="act_settings" title="feat ancestry settings" type="action">
                         y
                     </button>
-                    <button class="h2" name="roll_ACTION" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{ancestry_feats_and_abilities}}} {{info01_name=^{type}}} {{info01=@{feat_ancestry_type}}} {{info02_name=^{level}}} {{info02=@{feat_ancestry_level}}} {{desc=@{feat_ancestry_notes}}}"><span name= "attr_feat_ancestry"></span></button>
+                    <button class="h2" name="roll_ACTION" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{ancestry_feats_and_abilities}}} {{info01_name=^{type}}} {{info01=@{feat_ancestry_type}}} {{info02_name=^{level}}} {{info02=@{feat_ancestry_level}}} {{desc=@{feat_ancestry_notes}}}"><span name= "attr_name"></span></button>
                     <span name="attr_feat_ancestry_type"></span>
                     <span name="attr_feat_ancestry_level"></span>
                     <button data-i18n-title="show_or_hide_feat_ancestry_description" name="act_collapse" title="show or hide feat ancestry description" type="action">
@@ -3457,7 +3457,7 @@
                     <button class="pictos settings-button" data-i18n-title="feat_skill_settings" name="act_settings" title="feat skill settings" type="action">
                         y
                     </button>
-                    <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{skill_feats}}} {{info01_name=^{level}}} {{info01=@{feat_skill_level}}} {{desc=@{feat_skill_notes}}}"><span name= "attr_feat_skill"></span></button>
+                    <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{skill_feats}}} {{info01_name=^{level}}} {{info01=@{feat_skill_level}}} {{desc=@{feat_skill_notes}}}"><span name= "attr_name"></span></button>
                     <span name="attr_feat_skill_level"></span>
                     <button name="act_collapse" data-i18n-title="show_or_hide_feat_skill_description" title="show or hide feat skill description" type="action">
                         4
@@ -3489,7 +3489,7 @@
                     <button class="pictos settings-button" data-i18n-title="feat_general_settings"  name="act_settings" title="feat general settings" type="action">
                         y
                     </button>
-                     <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{general_feats}}} {{info01_name=^{level}}} {{info01=@{feat_general_level}}} {{desc=@{feat_general_notes}}}"><span name= "attr_feat_general"></span></button>
+                     <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{general_feats}}} {{info01_name=^{level}}} {{info01=@{feat_general_level}}} {{desc=@{feat_general_notes}}}"><span name= "attr_name"></span></button>
                     <span name="attr_feat_general_level"></span>
                     <button name="act_collapse" data-i18n-title="show_or_hide_feat_general_description"  title="show or hide feat general description" type="action">
                         4
@@ -3523,7 +3523,7 @@
                     <button class="pictos settings-button" data-i18n-title="feat_class_settings" name="act_settings" title="feat class settings" type="action">
                         y
                     </button>
-                    <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{class_feats_and_abilities}}} {{info01_name=^{type}}} {{info01=@{feat_class_type}}} {{info02_name=^{level}}} {{info02=@{feat_class_level}}} {{desc=@{feat_class_notes}}}"><span name= "attr_feat_class"></span></button>
+                    <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{class_feats_and_abilities}}} {{info01_name=^{type}}} {{info01=@{feat_class_type}}} {{info02_name=^{level}}} {{info02=@{feat_class_level}}} {{desc=@{feat_class_notes}}}"><span name= "attr_name"></span></button>
                     <span name="attr_feat_class_type"></span>
                     <span name="attr_feat_class_level"></span>
                     <button name="act_collapse" data-i18n-title="show_or_hide_feat_class_description"  title="show or hide feat class description" type="action">
@@ -3560,7 +3560,7 @@
                     <button class="pictos settings-button" data-i18n-title="feat_bonus_settings" name="act_settings" title="feat bonus settings"  type="action">
                         y
                     </button>
-                    <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{bonus_feats}}} {{desc=@{feat_bonus_notes}}}"><span name= "attr_feat_bonus"></span></button>
+                    <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{bonus_feats}}} {{desc=@{feat_bonus_notes}}}"><span name= "attr_name"></span></button>
                     <button data-i18n-title="show_or_hide_feat_bonus_description" name="act_collapse" title="show or hide feat bonus description" type="action">
                         4
                     </button>
@@ -3667,7 +3667,7 @@
                         y
                     </button>
                     <button name="roll_ACTION" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{worn_item}}} {{info01_name=^{invest}}} {{info01=@{worn_invest}}} {{info02_name=^{bulk}}} {{info02=@{worn_bulk}}} {{info03_name=^{quantity}}} {{info03=@{worn_quantity}}} {{notes_show=[[1]]}} {{notes=@{worn_item_notes}}}">
-                        <span name= "attr_worn_item"></span>
+                        <span name= "attr_name"></span>
                     </button>
                     <span class="inv-bulk" name="attr_worn_invest"></span>
                     <span class="inv-bulk" name="attr_worn_bulk"></span>
@@ -3711,7 +3711,7 @@
                             y
                         </button>
                         <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{readied_items}}} {{info01_name=^{bulk}}} {{info01=@{readied_bulk}}} {{info02_name=^{quantity}}} {{info02=@{readied_quantity}}} {{notes_show=[[1]]}} {{notes=@{readied_item_notes}}}">
-                            <span name= "attr_readied_item"></span>
+                            <span name= "attr_name"></span>
                         </button>
                         <span class="inv-bulk" name="attr_readied_bulk"></span>
                         <input class="" name="attr_readied_quantity" title="@{readied_quantity}" type="number" value="1" />
@@ -3749,7 +3749,7 @@
                             y
                         </button>
                         <button class="h2" name="roll_action" type="roll" value="@{whispertype} &{template:rolls} {{limit_height=@{roll_limit_height}}} {{charactername=@{character_name}}} {{header=@{name}}} {{subheader=^{other_items}}} {{info01_name=^{bulk}}} {{info01=@{other_bulk}}} {{info02_name=^{quantity}}} {{info02=@{other_quantity}}} {{notes_show=[[1]]}} {{notes=@{other_item_notes}}}">
-                            <span name= "attr_other_item"></span>
+                            <span name= "attr_name"></span>
                         </button>
                         <span class="inv-bulk" name="attr_other_bulk"></span>
                         <input class="" name="attr_other_quantity" title="@{other_quantity}" type="number" value="1" />

@@ -1,11 +1,11 @@
 {
   "html": "starfinder2community.html",
   "css": "starfinder2community.css",
-  "authors": "User Collaboration Team",
-  "roll20userid": "557736, 75857, 2998048, 1223200, 45398, 459831",
+  "authors": "JoshLikesBeer, based on work by User Collaboration Team",
+  "roll20userid": "4362564",
   "preview": "preview.png",
-  "compendium": "pf2",
-  "instructions": "Â© 2019 Paizo Inc. Paizo, the Paizo golem logo, Pathfinder, and the Pathfinder logo are registered trademarks of Paizo Inc.  Pathfinder Adventure Path, Pathfinder Roleplaying Game, Pathfinder World Guide, and the Pathfinder 'P' logo are trademarks of Paizo Inc.  All Paizo titles and Paizo's character names and distinctive likenesses are property and copyright of Paizo, Inc. in the United States and other countries.",
+  "compendium": "sf2",
+  "instructions": "Â© 2019 Paizo Inc. Paizo, the Paizo golem logo, Starfinder, and the Starfinder logo are registered trademarks of Paizo Inc.  Starfinder Adventure Path, Starfinder Roleplaying Game, Starfinder Galaxy Guide, and the Starfinder logo are trademarks of Paizo Inc.  All Paizo titles and Paizo's character names and distinctive likenesses are property and copyright of Paizo, Inc. in the United States and other countries.",
   "useroptions": [
     {
       "attribute": "sheet_type",
