@@ -1,9 +1,9 @@
 {
   "html": "starfinder2community.html",
   "css": "starfinder2community.css",
-  "authors": "JoshLikesBeer, based on work by User Collaboration Team",
+  "authors": "JoshLikesBeer, based on Pathfinder 2e sheet by the Paizo User Collaboration Team",
   "roll20userid": "4362564",
-  "preview": "preview.png",
+  "preview": "https://github.com/JoshLikesBeer/roll20-character-sheets/blob/master/Starfinder%20Second%20Edition%20Community/images/preview.jpg?raw=true",
   "compendium": "sf2",
   "instructions": "Â© 2019 Paizo Inc. Paizo, the Paizo golem logo, Starfinder, and the Starfinder logo are registered trademarks of Paizo Inc.  Starfinder Adventure Path, Starfinder Roleplaying Game, Starfinder Galaxy Guide, and the Starfinder logo are trademarks of Paizo Inc.  All Paizo titles and Paizo's character names and distinctive likenesses are property and copyright of Paizo, Inc. in the United States and other countries.",
   "useroptions": [

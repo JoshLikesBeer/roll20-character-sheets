@@ -1,5 +1,5 @@
 :root {
-  --dark-secondarytext: #d6d6d6;
+  --dark-secondarytext: #888;
 }
 
 /**********************************************************************************************************/
@@ -81,6 +81,10 @@ h2 {
   text-transform: uppercase;
   font-weight: bold; }
 
+input {
+  width:100%;
+}
+
 input[type="text"],
 input[type="number"],
 select {
@@ -110,7 +114,7 @@ input[type="text"]:placeholder-shown,
 input[type="number"]:placeholder-shown,
 textarea:placeholder-shown {
   background-color: #fdf6ed;
-  border: 0.2em solid #016073;
+  border: 0.2em solid #39b44a;
   text-transform: capitalize; }
 
 input[type="number"] {
@@ -297,7 +301,7 @@ input[name="attr_toggles"][value*=innate] ~ div.sheet-spells div.sheet-column di
 /* HIDE PC SECTIONS NOT NEEDED ON NPC PAGE
 	----------------------------- */
 div.sheet-background-color {
-  background-color: #016073;
+  background-color: #39b44a;
   color: white; }
 
 div.sheet-ability-select label {
@@ -423,7 +427,13 @@ span.sheet-sublabel {
   text-align: center;
   text-transform: uppercase;
   width: 100%;
-  white-space: nowrap; }
+  white-space: nowrap; 
+  color: #eee;
+}
+
+span.sheet-label {
+  color: #fdf !important;
+}
 
 span.sheet-symbol {
   color: white;
@@ -1157,7 +1167,7 @@ div.sheet-strikes div.sheet-settings div.sheet-strikes-grid {
     margin-bottom: 5px; }
 
 div.sheet-strikes div.sheet-settings div.sheet-damage-grid {
-  grid-template-columns: 1fr 1fr 0.25fr 1.5fr 0.25fr 0.25fr 0.25fr;
+  grid-template-columns: 1fr 1fr 0.25fr 1fr 1fr;
   grid-row-gap: 2%; }
   div.sheet-strikes div.sheet-settings div.sheet-damage-grid h2,
   div.sheet-strikes div.sheet-settings div.sheet-damage-grid label[data-i18n-title*="damage_supplementary_effects"],
@@ -1210,11 +1220,15 @@ div.sheet-repeating-weapon-proficiences-grid label {
 div.sheet-repeating-weapon-proficiences-grid label[data-i18n="other"],
 div.sheet-weapon-proficiences-grid h2[data-i18n="simple"],
 div.sheet-weapon-proficiences-grid label[data-i18n-title="simple_weapon_proficiencies_rank"],
+div.sheet-weapon-proficiences-grid h2[data-i18n="advanced"],
+div.sheet-weapon-proficiences-grid label[data-i18n-title="advanced_weapon_proficiencies_rank"],
 div.sheet-repeating-weapon-proficiences-grid label[data-i18n-title="other_weapon_proficiencies_name"] {
   grid-column: 1; }
 
 div.sheet-weapon-proficiences-grid h2[data-i18n="martial"],
 div.sheet-weapon-proficiences-grid label[data-i18n-title="martial_weapon_proficiencies_rank"],
+div.sheet-weapon-proficiences-grid h2[data-i18n="unarmed"],
+div.sheet-weapon-proficiences-grid label[data-i18n-title="unarmed_attack_proficiencies_rank"],
 div.sheet-repeating-weapon-proficiences-grid label[data-i18n-title="other_weapon_proficiencies_rank"] {
   grid-column: 2; }
 
@@ -1826,7 +1840,7 @@ div.sheet-spells div.sheet-spell-panel-row > div.sheet-settings {
   div.sheet-spells div.sheet-spell-panel-row > div.sheet-settings span.sheet-bordertop {
     display: flex;
     flex-direction: column;
-    border-top: 3px solid #016073;
+    border-top: 3px solid #39b44a;
     grid-column: 1 / -1;
     padding-top: 3px;
     color: white;
@@ -1946,7 +1960,7 @@ span.sheet-collapse {
 /* Adjusts looks on a section relying on .sheet.settings for expand/collapse */
 div.sheet-details div.sheet-notes div.sheet-settings {
   border-left: none;
-  background-color: #016073; }
+  background-color: #39b44a; }
 
 div.sheet-settings::before {
   display: block;
