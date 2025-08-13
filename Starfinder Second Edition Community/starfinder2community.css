@@ -12,6 +12,10 @@
 .charsheet * {
   font-size: 1em; }
 
+textarea.action.tokenizer {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .charsheet .active-drop-target.dropping {
   opacity: 0.4;
   transition: opacity .15s ease-in-out;
@@ -1113,7 +1117,7 @@ div.sheet-strikes span[data-i18n="atk"] {
 div.sheet-strikes span[data-i18n="damage"] {
   grid-area: 3 / 2 / 3 / 4; }
 
-div.sheet-strikes button.sheet-display-weapon {
+div.sheet-strikes div.sheet-display-weapon {
   grid-area: 2 / 1 / 2 / 4; }
 
 div.sheet-strikes button.sheet-display-attack {
@@ -1161,9 +1165,16 @@ div.sheet-strikes div.sheet-settings span.sheet-sublabel {
 div.sheet-strikes div.sheet-settings div.sheet-strikes-grid {
   grid-template-columns: 1fr 0.5fr 1fr 1fr 1fr 1fr; }
   div.sheet-strikes div.sheet-settings div.sheet-strikes-grid h2,
-  div.sheet-strikes div.sheet-settings div.sheet-strikes-grid label[data-i18n-title*="weapon_name"],
-  div.sheet-strikes div.sheet-settings div.sheet-strikes-grid label[data-i18n-title*="weapon_traits"] {
-    grid-column: 1 / -1;
+  div.sheet-strikes div.sheet-settings div.sheet-strikes-grid label[data-i18n-title*="weapon_name"] {
+      grid-column: 1 / -1;
+      margin-bottom: 5px;
+    }
+  div.sheet-strikes div.sheet-settings div.sheet-strikes-grid label[data-i18n-title*="agile"] {
+    grid-column: 1 / 1;
+  }
+  div.sheet-strikes div.sheet-settings div.sheet-strikes-grid label[data-i18n-title*="weapon_traits"],
+  div.sheet-strikes div.sheet-settings div.sheet-strikes-grid label[data-i18n-title*="ranged_weapon_range"] {
+    grid-column: 2/ -1;
     margin-bottom: 5px; }
 
 div.sheet-strikes div.sheet-settings div.sheet-damage-grid {
