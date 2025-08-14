@@ -2350,6 +2350,13 @@ div.sheet-npc-defense-grid {
 div.sheet-npc-perception > label {
   grid-column: span 2; }
 
+label.sheet-npc-description {
+  width: 100% !important;
+}
+textarea.sheet-npc-description {
+  height: 3em !important;
+}
+
 div.sheet-npc-info > label {
   grid-column: span 2; }
   div.sheet-npc-info > label:nth-child(1) {
@@ -2413,7 +2420,7 @@ div.sheet-npc-traits-row {
   margin: 0.3em 0; }
 
 span.sheet-npc-trait {
-  background-color: #40105b;
+  background-color: #156079;
   border: solid 0.1em #9f75b3;
   color: white;
   font-weight: bold;
@@ -2424,6 +2431,12 @@ span.sheet-npc-temperament-trait {
 
 span.sheet-npc-size-trait {
   background-color: #157956; }
+
+span.sheet-npc-rarity-trait {
+  background-color: #40105b; }
+
+span.sheet-npc-creature-type-trait {
+  background-color: #40105b; }
 
 span.sheet-npc-row-title {
   font-weight: bold;

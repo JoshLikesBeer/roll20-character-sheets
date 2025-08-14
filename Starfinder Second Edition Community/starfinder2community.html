@@ -123,7 +123,7 @@
         <input name="attr_sheet_type" type="radio" value="options"/><span data-i18n="options"></span>
       </label>
     </div>
-    <!-- NPC SHEET--><div class="npc compendium-drop-target monsters">
+    <!-- MARK: -  NPC SHEET--><div class="npc compendium-drop-target monsters">
     <input type="hidden" name="attr_npcdrop_name" accept="Name" />
     <input type="hidden" name="attr_npcdrop_uniq" accept="uniqueName" />
     <input type="hidden" name="attr_npcdrop_category" accept="Category" />
@@ -149,7 +149,7 @@
             </label>
             <label data-i18n-title="temperament" title="temperament">
                 <span data-i18n="temperament">temperament</span>
-                <input data-i18n-placeholder="temperament" name="attr_temperament" placeholder="temperament" spellcheck="false" title="@{temperament}" type="text" value="" />
+                <input data-i18n-placeholder="npc_placeholder_temperament" name="attr_temperament" placeholder="Chaotic Hungry" spellcheck="false" title="@{temperament}" type="text" value="" />
             </label>
             <label data-i18n-title="size" title="size">
                 <span data-i18n="size">size</span>
@@ -157,8 +157,41 @@
             </label>
             <label data-i18n-title="traits" title="traits">
                 <span data-i18n="traits">traits</span>
-                <input data-i18n-placeholder="npc_placeholder_traits" name="attr_traits" placeholder="rare, aquatic, humanoid" spellcheck="false" title="@{traits}" type="text" value="" />
+                <input data-i18n-placeholder="npc_placeholder_traits" name="attr_traits" placeholder="aquatic, mutant" spellcheck="false" title="@{traits}" type="text" value="" />
             </label>
+            <label data-i18n-title="npc_creature_trait">
+                <span data-i18n="npc_creature_trait">Creature Trait</span>
+                <input 
+                    data-i18n-placeholder="npc_placeholder_creature_trait" 
+                    name="attr_npc_creature_trait" 
+                    placeholder="Humanoid" 
+                    spellcheck="false" 
+                    title="@{npc_creature_trait}"
+                    type="text"
+                    value=""
+                />
+            </label>
+            <label data-i18n-title="npc_identify_skill">
+                <span data-i18n="npc_identify_skill">Identification Skill</span>
+                <input 
+                    data-i18n-placeholder="society" 
+                    name="attr_npc_identify_skill" 
+                    placeholder="Society" 
+                    spellcheck="false" 
+                    title="@{npc_identify_skill}"
+                    type="text"
+                    value=""
+                />
+            </label>
+            <label data-i18n-title="npc_rarity" title="Rarity">
+                <span data-i18n="npc_rarity">Rarity</span>
+                <select name="attr_npc_rarity" title="@{npc_rarity}" value="0">
+                  <option data-i18n="common" value="0">Common</option>
+                  <option data-i18n="uncommon" value="2">Uncommon</option>
+                  <option data-i18n="rare" value="5">Rare</option>
+                  <option data-i18n="unique" value="10">Unique</option>
+                </select>
+              </label>
         </div><!-- npc-info -->
         <div class="npc-perception npc-block">
             <label data-i18n-title="perception" title="perception">
@@ -174,7 +207,21 @@
                 <input data-i18n-placeholder="npc_placeholder_languages" name="attr_languages" placeholder="aquan, common, dwarven" spellcheck="false" title="@{languages}" type="text" value="" />
             </label>
         </div><!-- npc-perception -->
+        <div class="npc-block">
+            <label data-i18n-title="description" title="npc_description" class="npc-description">
+                <span data-i18n="description">Description</span>
+                <textarea 
+                    data-i18n-placeholder="npc_placeholder_description" 
+                    name="attr_npc_description" 
+                    class="npc-description"
+                    placeholder="a big hairy alien with lots of teeth" 
+                    spellcheck="false" 
+                    title="@{npc_description}"
+                ></textarea>
+            </label>
+        </div>
 
+        <!-- MARK: -  NPC Skills-->
         <h1 data-i18n="skills">skills</h1>
 
         <div class="npc-skills npc-block">
@@ -459,6 +506,7 @@
 
     </div><!-- npc-settings -->
 
+    <!-- MARK:- NPC Display-->
     <div class="npc-display">
 
         <div class="npc-title">
@@ -470,7 +518,23 @@
         <div class="npc-row npc-traits-row">
             <span class="npc-trait npc-temperament-trait uppercase" name="attr_temperament"></span>
             <span class="npc-trait npc-size-trait uppercase" name="attr_size"></span>
+            <!--
+                <span class="npc-trait npc-rarity-trait uppercase" name="attr_npc_rarity"></span>
+            -->
+            <span class="npc-trait npc-creature-type-trait uppercase" name="attr_npc_creature_trait"></span>
             <span class="npc-trait uppercase" name="attr_traits"></span>
+        </div>
+        <div class="npc-row">
+            <button
+                class="npc-roll"
+                name="roll_identify"
+                type="roll"
+                value="/w gm &{template:rolls}{{charactername=@{character_name} }}{{header=Identify}} {{roll01=DCs}} {{roll02=**@{npc_creature_trait} (@{npc_identify_skill}):** DC [[@{level}+14+floor(@{level}/3)+@{npc_rarity}]]\n**Unspecified Lore**: DC [[@{level}+12+floor(@{level}/3)+@{npc_rarity}]]\n**Specified Lore:** DC [[@{level}+9+floor(@{level}/3)+@{npc_rarity}]]}} {{desc=@{npc_description}}}"
+            >
+                <span class="npc-row-title" data-i18n="identify">Identify</span>
+                <span name="attr_npc_creature_trait"></span>
+                <span class="npc-parenthesized-field" name="attr_npc_identify_skill"></span>
+            </button>
         </div>
 
         <div class="npc-row">
@@ -716,6 +780,8 @@
                 <span name="attr_charisma_modifier"></span>
             </button>
         </div>
+
+        <!-- MARK: - NPC Items-->
         <div class="npc-row">
             <span class="npc-row-title" data-i18n="items">items</span>
             <div class="npc-items repeating">
@@ -744,7 +810,7 @@
             </div>
         </div>
 
-        <!-- Interaction Abilities (no PC equivalent) -->
+        <!-- MARK: - Interaction Abilities (no PC equivalent) -->
 
         <div class="npc-row">
             <span class="npc-row-title" data-i18n="interaction_abilities">Interaction Abilities</span>
@@ -825,7 +891,7 @@
             <span name="attr_resistances"></span>
         </div>
 
-        <!-- automatic and reactive abilities (equivalent of PC's "free actions and reactions") -->
+        <!-- MARK: - automatic and reactive abilities (equivalent of PC's "free actions and reactions") -->
 
         <div class="npc-row">
             <span class="npc-row-title" data-i18n="auto_and_reactive_abilities">automatic and reactive abilites</span>
@@ -1027,7 +1093,7 @@
             </div>
         </div>
 
-        <!-- NPC Attacks - Ranged -->
+        <!-- MARK: - NPC Attacks - Ranged -->
 
         <div class="npc-row">
             <span class="npc-row-title" data-i18n="ranged_strikes">ranged strikes</span>
@@ -1150,7 +1216,7 @@
             </div>
         </div>
 
-        <!-- Offensive or Proactive Abilities (equivalent of PC's "actions and activities") -->
+        <!-- MARK: - Offensive or Proactive Abilities (equivalent of PC's "actions and activities") -->
 
         <div class="npc-row">
             <span class="npc-row-title" data-i18n="offensive_or_proactive_abilities">offensive or proactive abilities</span>
